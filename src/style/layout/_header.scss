@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+.header {
+  background-color: var(--clr-dark-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(32) rem(165);
+  &__logo {
+    cursor: pointer;
+  }
+  &__shopIcon {
+    width: rem(24);
+    color: var(--clr-light-1);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &:hover {
+      color: var(--clr-primary);
+    }
+  }
+}

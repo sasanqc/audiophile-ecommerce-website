@@ -1,0 +1,48 @@
+@use "../abstracts/" as *;
+.radioSelection {
+  display: flex;
+  align-items: center;
+  padding: rem(21);
+  border: 1px solid #cfcfcf;
+  border-radius: rem(8);
+  user-select: none;
+  cursor: pointer;
+  input {
+    position: absolute;
+    visibility: hidden;
+  }
+  &__input {
+    margin-right: rem(16);
+    width: rem(20);
+    height: rem(20);
+    border: 1px solid #cfcfcf;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    span {
+      margin-left: rem(32);
+    }
+    &::before {
+      content: "";
+      display: inline-block;
+      transition: all 0.3s ease;
+      background-color: var(--clr-primary);
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+    }
+  }
+
+  &--active {
+    border: 1px solid var(--clr-primary);
+    .radioSelection__input::before {
+      width: rem(10);
+      height: rem(10);
+    }
+  }
+  &:hover {
+    border: 1px solid var(--clr-primary);
+  }
+}

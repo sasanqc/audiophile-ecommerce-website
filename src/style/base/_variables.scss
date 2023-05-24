@@ -1,3 +1,15 @@
 :root {
-  --font-family: "Outfit";
+  --font-family: "Manrope";
+  --clr-light-1: #ffffff;
+  --clr-light-2: #fafafa;
+  --clr-light-3: #f1f1f1;
+
+  --clr-dark-1: #000000;
+  --clr-dark-2: #0e0e0e;
+  --clr-dark-3: #101010;
+
+  --clr-primary-1: #fbaf85;
+  --clr-primary-2: #d87d4a;
+
+  --clr-primary: var(--clr-primary-2);
 }

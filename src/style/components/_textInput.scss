@@ -1,0 +1,41 @@
+@use "../abstracts/" as *;
+.textInput {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-weight: 700;
+    font-size: rem(12);
+    line-height: rem(16);
+    margin-bottom: rem(8);
+    letter-spacing: rem(-0.214286);
+  }
+
+  &__input {
+    padding: rem(18) rem(24);
+    outline: none;
+    border: 1px solid #cfcfcf;
+    border-radius: rem(8);
+    background-color: inherit;
+    &:focus {
+      border: 1px solid var(--clr-primary-2);
+      caret-color: var(--clr-primary-2);
+    }
+  }
+
+  &--error {
+    .textInput__label {
+      color: #cd2c2c;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &::after {
+        content: "Wrong format";
+        font-weight: 500;
+      }
+    }
+    .textInput__input {
+      border: 2px solid #cd2c2c;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@use "../abstracts/" as *;
+[class^="btn--"],
+[class*=" btn--"] {
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: rem(13);
+  line-height: rem(18);
+  letter-spacing: rem(1);
+  transition: all 0.25s ease;
+}
+.btn {
+  &--fill {
+    background-color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+    color: var(--clr-light-1);
+    &:hover {
+      background-color: var(--clr-primary-1);
+      border: 1px solid var(--clr-primary-1);
+    }
+  }
+
+  &--outline {
+    border: 1px solid var(--clr-dark-1);
+    color: var(--clr-dark-1);
+    background-color: inherit;
+    &:hover {
+      background-color: var(--clr-dark-1);
+      color: var(--clr-light-1);
+    }
+  }
+
+  &--fill,
+  &--outline {
+    padding: rem(16) rem(32);
+  }
+
+  &--noborder {
+    background-color: inherit;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      color: var(--clr-primary-2);
+    }
+    &::after {
+      content: "\203A";
+      margin-left: rem(13);
+      font-size: rem(20);
+      color: var(--clr-primary-2);
+    }
+  }
+}

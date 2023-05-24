@@ -1,0 +1,68 @@
+@use "../abstracts/" as *;
+[class^="heading--"],
+[class*=" heading--"] {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.heading {
+  &--1 {
+    font-size: rem(56);
+    line-height: rem(58);
+    letter-spacing: rem(2);
+  }
+  &--2 {
+    font-size: rem(40);
+    line-height: rem(44);
+    letter-spacing: rem(1.42);
+  }
+  &--3 {
+    font-size: rem(32);
+    line-height: rem(36);
+    letter-spacing: rem(1.14);
+  }
+  &--4 {
+    font-size: rem(28);
+    line-height: rem(38);
+    letter-spacing: rem(2);
+  }
+  &--5 {
+    font-size: rem(24);
+    line-height: rem(33);
+    letter-spacing: rem(1.71);
+  }
+  &--6 {
+    font-size: rem(18);
+    line-height: rem(25);
+    letter-spacing: rem(1.28571);
+  }
+}
+
+.text {
+  &--subtitle {
+    font-weight: 700;
+    font-size: rem(13);
+    line-height: rem(25);
+    letter-spacing: rem(0.928);
+    color: #d87d4a;
+    text-transform: uppercase;
+  }
+  &--overline {
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: rem(19);
+    letter-spacing: rem(10);
+    color: #d87d4a;
+    text-transform: uppercase;
+  }
+}
+.body {
+  font-weight: 500;
+  font-size: rem(15);
+  line-height: rem(25);
+}
+.inputText {
+  font-weight: 700;
+  font-size: rem(14);
+  line-height: rem(19);
+  letter-spacing: rem(-0.25);
+}

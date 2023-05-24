@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+.navigation {
+  &__list {
+    display: flex;
+    gap: rem(34);
+  }
+  &__item {
+  }
+  &__link {
+    color: var(--clr-light-1);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: rem(13);
+    line-height: rem(25);
+    letter-spacing: rem(2);
+    transition: all 0.25s ease;
+    &:hover {
+      color: var(--clr-primary);
+    }
+  }
+}
