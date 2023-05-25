@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+
+.home {
+  &__hero {
+    background-image: url("../../assets/images/home/desktop/image-hero.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: rem(200);
+  }
+
+  .header {
+    background-color: transparent;
+    margin-left: rem(165);
+    margin-right: rem(165);
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 1px solid rgba($color: white, $alpha: 0.2);
+  }
+}

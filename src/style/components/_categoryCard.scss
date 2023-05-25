@@ -1,0 +1,24 @@
+@use "../abstracts/" as *;
+.categoryCard {
+  width: rem(350);
+  text-align: center;
+  background-color: var(--clr-light-3);
+  border-radius: rem(8);
+  position: relative;
+  display: inline-block;
+  &__image {
+    max-width: rem(210);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30%;
+  }
+  .heading--6 {
+    margin-top: rem(120);
+    margin-bottom: rem(15);
+  }
+  .btn--noborder {
+    margin: 0 auto;
+    margin-bottom: rem(30);
+  }
+}

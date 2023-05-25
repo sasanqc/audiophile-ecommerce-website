@@ -1,11 +1,26 @@
-import Header from "./layout/Header";
+import Categories from "./components/Categories";
+import Button from "./components/UI/Button";
+import Hero from "./layout/Hero";
 function App() {
   return (
     <main className="home">
-      <Header />
-      <section className="newProduct"></section>
-      <section className="categories"></section>
-      <section className="speakerSample"></section>
+      <Hero />
+      <Categories />
+      <section className="sampleProduct">
+        <img
+          src="/images/home/desktop/image-speaker-zx9.png"
+          alt="sample product"
+          className="sampleProduct__image"
+        />
+        <div className="sampleProduct__textBox">
+          <h1 className="heading--1">ZX9 SPEAKER</h1>
+          <p className="body">
+            Upgrade to premium speakers that are phenomenally built to deliver
+            truly remarkable sound.
+          </p>
+          <Button type={"dark"} label={"see product"} />
+        </div>
+      </section>
       <section className="secondSpeakerSample"></section>
       <section className="earphones"></section>
       <section className="feature"></section>

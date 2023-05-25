@@ -11,13 +11,22 @@
   transition: all 0.25s ease;
 }
 .btn {
-  &--fill {
+  &--primary {
     background-color: var(--clr-primary);
     border: 1px solid var(--clr-primary);
     color: var(--clr-light-1);
     &:hover {
       background-color: var(--clr-primary-1);
       border: 1px solid var(--clr-primary-1);
+    }
+  }
+  &--dark {
+    background-color: var(--clr-dark-1);
+    border: 1px solid var(--clr-dark-1);
+    color: var(--clr-light-1);
+    &:hover {
+      background-color: var(--clr-dark-2);
+      border: 1px solid var(--clr-dark-2);
     }
   }
 
@@ -31,7 +40,8 @@
     }
   }
 
-  &--fill,
+  &--primary,
+  &--dark,
   &--outline {
     padding: rem(16) rem(32);
   }
