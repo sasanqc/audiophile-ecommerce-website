@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+.earphones {
+  margin: 0 rem(165);
+  display: flex;
+  gap: rem(30);
+  margin-bottom: rem(200);
+  &__image {
+    width: 50%;
+    border-radius: rem(8);
+  }
+  &__seeMore {
+    padding: rem(101) rem(95);
+    background-color: var(--clr-light-3);
+    border-radius: rem(8);
+
+    width: 50%;
+    .heading--4 {
+      margin-bottom: rem(32);
+    }
+  }
+}

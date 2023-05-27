@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../components/UI/Button";
-import Header from "../layout/Header";
+import Button from "../../components/UI/Button";
+import Header from "../../layout/Header";
 const Hero = () => {
   return (
     <div className="home__hero">

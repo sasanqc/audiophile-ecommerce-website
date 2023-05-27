@@ -15,3 +15,7 @@
 # hero , categories , sample product
 
 4 hour
+
+# footer and finished home
+
+2 hour

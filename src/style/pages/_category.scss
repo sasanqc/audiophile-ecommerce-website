@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+.category {
+  &__title {
+    background-color: var(--clr-dark-1);
+    color: var(--clr-light-1);
+    padding: rem(98);
+    text-align: center;
+    margin-bottom: rem(160);
+  }
+
+  [class~="productReview"]:last-of-type {
+    margin-bottom: rem(240);
+  }
+}

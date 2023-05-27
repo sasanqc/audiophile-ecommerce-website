@@ -1,0 +1,26 @@
+@use "../abstracts/" as *;
+.feature {
+  margin: 0 rem(165);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: rem(200);
+  &__textBox {
+    max-width: rem(445);
+    .heading--2 {
+      margin-bottom: rem(32);
+      span {
+        color: var(--clr-primary);
+      }
+    }
+    .body {
+      color: #000000;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+  }
+  &__image {
+    width: 50%;
+    border-radius: rem(8);
+  }
+}

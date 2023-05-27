@@ -1,0 +1,29 @@
+@use "../abstracts/" as *;
+.productReview {
+  display: flex;
+  margin-right: rem(165);
+  margin-left: rem(165);
+  align-items: center;
+  margin-bottom: rem(160);
+  justify-content: space-between;
+  &__image {
+    max-width: rem(540);
+    border-radius: rem(8);
+  }
+  &__textBox {
+    max-width: rem(445);
+
+    justify-self: end;
+    .text--overline {
+      color: var(--clr-primary);
+      margin-bottom: rem(16);
+    }
+    .heading--2 {
+      margin-bottom: rem(32);
+    }
+    .body {
+      margin-bottom: rem(40);
+      opacity: 0.5;
+    }
+  }
+}
