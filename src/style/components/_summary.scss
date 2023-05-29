@@ -1,0 +1,74 @@
+@use "../abstracts/" as *;
+.summary {
+  background-color: var(--clr-light-1);
+  padding: rem(32);
+  border-radius: rem(8);
+  height: fit-content;
+  .heading--6 {
+    margin-bottom: rem(32);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    margin-bottom: rem(32);
+  }
+
+  &__product {
+    display: flex;
+    align-items: center;
+  }
+  &__textBox {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    :nth-child(2) {
+      justify-self: end;
+    }
+    p {
+      font-weight: 700;
+    }
+    :nth-child(2),
+    :nth-child(3) {
+      opacity: 0.5;
+    }
+  }
+  &__image {
+    width: rem(64);
+    height: rem(64);
+    border-radius: rem(8);
+    margin-right: rem(16);
+  }
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+    margin-bottom: rem(32);
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:last-child {
+      margin-top: rem(16);
+      .summary__priceValue {
+        color: var(--clr-primary);
+      }
+    }
+  }
+  &__priceTitle {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: rem(15);
+    line-height: rem(25);
+    opacity: 0.5;
+  }
+  &__priceValue {
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: rem(25);
+  }
+  .btn--primary {
+    width: 100%;
+  }
+}

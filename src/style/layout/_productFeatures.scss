@@ -1,0 +1,32 @@
+@use "../abstracts/" as *;
+.productFeatures {
+  display: flex;
+  padding: 0 rem(165);
+  gap: rem(125);
+  margin-bottom: rem(160);
+  &__features {
+    max-width: rem(635);
+    .heading--2 {
+      margin-bottom: rem(32);
+    }
+    .body {
+      opacity: 0.5;
+    }
+  }
+  &__inTheBox {
+    .heading--2 {
+      margin-bottom: rem(32);
+    }
+  }
+  &__item {
+    display: flex;
+    margin-bottom: rem(8);
+    .body {
+      opacity: 0.5;
+    }
+    span {
+      color: var(--clr-primary);
+      margin-right: rem(24);
+    }
+  }
+}

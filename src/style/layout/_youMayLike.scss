@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+.youMayLike {
+  padding: 0 rem(165);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: rem(160);
+
+  &__image {
+    max-width: rem(350);
+    margin-bottom: rem(40);
+    border-radius: rem(8);
+  }
+
+  .heading--5 {
+    margin-bottom: rem(32);
+  }
+}

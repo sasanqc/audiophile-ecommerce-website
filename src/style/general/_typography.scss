@@ -63,6 +63,7 @@
 .inputText {
   font-weight: 700;
   font-size: rem(14);
-  line-height: rem(19);
+  // line-height: rem(1);
   letter-spacing: rem(-0.25);
+  display: inline-block;
 }

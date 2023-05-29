@@ -9,6 +9,7 @@
   line-height: rem(18);
   letter-spacing: rem(1);
   transition: all 0.25s ease;
+  user-select: none;
 }
 .btn {
   &--primary {

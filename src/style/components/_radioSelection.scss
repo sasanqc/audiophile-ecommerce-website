@@ -2,10 +2,11 @@
 .radioSelection {
   display: flex;
   align-items: center;
-  padding: rem(21);
+  padding: rem(18);
   border: 1px solid #cfcfcf;
   border-radius: rem(8);
   user-select: none;
+  height: fit-content;
   cursor: pointer;
   input {
     position: absolute;
@@ -18,6 +19,7 @@
     border: 1px solid #cfcfcf;
     border-radius: 50%;
     position: relative;
+    display: inline-block;
     cursor: pointer;
     span {
       margin-left: rem(32);

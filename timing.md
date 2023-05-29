@@ -19,3 +19,7 @@
 # footer and finished home
 
 2 hour
+
+# category page
+
+1 hour
