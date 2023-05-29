@@ -1,12 +1,17 @@
 @use "../abstracts/" as *;
 .categories {
-  padding-left: rem(165);
-  padding-right: rem(165);
   display: block;
   &__list {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: rem(30);
   }
   margin-bottom: rem(168);
+  &__item {
+    background-color: var(--clr-light-3);
+    border-radius: rem(8);
+    flex: 1;
+    text-align: center;
+  }
 }

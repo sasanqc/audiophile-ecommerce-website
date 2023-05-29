@@ -5,23 +5,32 @@ import ProductFeatures from "../components/ProductFeatures";
 import YouMayLike from "../components/YouMayLike";
 import ProductImages from "../components/ProductImages";
 import Categories from "../components/Categories";
-import Feature from "../layout/home/Feature";
-import Footer from "../layout/Footer";
+import { useParams } from "react-router-dom";
+import AppShell from "../layout/AppShell";
+import data from "../data.json";
 const ProductDetail = () => {
+  const params = useParams();
+  const product = data.find((el) => el.slug === params.slug);
+  console.log(product);
   return (
-    <main className="productDetail">
-      <Header />
-      <a href="#home" className="body productDetail__goBack">
-        Go Back
-      </a>
-      <ProductDescription />
-      <ProductFeatures />
-      <ProductImages />
-      <YouMayLike />
-      <Categories />
-      <Feature />
-      <Footer />
-    </main>
+    <AppShell className={"productDetail"}>
+      <div className="pageContainer">
+        <a href="#home" className="body productDetail__goBack">
+          Go Back
+        </a>
+        <ProductDescription
+          name={product.name}
+          description={product.description}
+          isNew={product.new}
+          price={product.price}
+          image={product.image}
+        />
+        <ProductFeatures />
+        <ProductImages />
+        <YouMayLike />
+        <Categories />
+      </div>
+    </AppShell>
   );
 };
 

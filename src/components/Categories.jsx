@@ -19,9 +19,9 @@ const Categories = () => {
   return (
     <section className="categories">
       <ul className="categories__list">
-        {items.map((item) => (
+        {items.map((item, index) => (
           <li className="categories__item">
-            <CategoryCard name={item.name} image={item.image} />
+            <CategoryCard name={item.name} image={item.image} key={index} />
           </li>
         ))}
       </ul>

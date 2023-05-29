@@ -5,8 +5,10 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: rem(200);
+  gap: rem(125);
   &__textBox {
     max-width: rem(445);
+
     .heading--2 {
       margin-bottom: rem(32);
       span {
@@ -19,8 +21,13 @@
       opacity: 0.5;
     }
   }
+  &__imageContainer {
+    // max-width: 50%;
+  }
   &__image {
-    width: 50%;
+    width: 100%;
+    height: auto;
     border-radius: rem(8);
+    object-fit: cover;
   }
 }

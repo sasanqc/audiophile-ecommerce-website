@@ -24,8 +24,46 @@
   }
   &__items {
     margin-bottom: rem(46);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: rem(8);
+    overflow: hidden;
   }
   .btn--primary {
     width: 100%;
+  }
+  &__details {
+    background-color: var(--clr-light-3);
+    padding: rem(24);
+  }
+  &__image {
+    width: rem(50);
+    height: rem(50);
+    margin-right: rem(16);
+  }
+  &__firstProduct {
+    display: flex;
+    padding-bottom: rem(12);
+    border-bottom: 1px solid rgba(#000000, 0.08);
+    margin-bottom: rem(12);
+  }
+  &__moreItems {
+    text-align: center;
+    font-size: rem(12);
+    line-height: rem(16);
+    letter-spacing: rem(-0.214286);
+    opacity: 0.5;
+  }
+  &__total {
+    background-color: #000000;
+    flex: 1;
+    color: white;
+    text-transform: uppercase;
+    padding: rem(41) rem(32);
+    :first-child {
+      opacity: 0.5;
+      margin-bottom: rem(8);
+    }
   }
 }

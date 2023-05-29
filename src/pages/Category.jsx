@@ -1,21 +1,29 @@
 import React from "react";
-import Header from "../layout/Header";
+
 import ProductReview from "../components/ProductReview";
 import Categories from "../components/Categories";
-import Feature from "../layout/home/Feature";
-import Footer from "../layout/Footer";
-const Category = () => {
+
+import AppShell from "../layout/AppShell";
+const Category = ({ data, title }) => {
+  console.log(data);
   return (
-    <main className="category">
-      <Header />
-      <h2 className="heading--2 category__title">speakers</h2>
-      <ProductReview dir={"left"} />
-      <ProductReview dir={"right"} />
-      <ProductReview dir={"left"} />
-      <Categories />
-      <Feature />
-      <Footer />
-    </main>
+    <AppShell className={"category"}>
+      <h2 className="heading--2 category__title">{title}</h2>
+      <div className="pageContainer">
+        {data.map((el, index) => (
+          <ProductReview
+            dir={index % 2 === 0 ? "left" : "right"}
+            isNew={el.new}
+            name={el.name}
+            description={el.description}
+            image={el.image}
+            slug={el.slug}
+          />
+        ))}
+
+        <Categories />
+      </div>
+    </AppShell>
   );
 };
 

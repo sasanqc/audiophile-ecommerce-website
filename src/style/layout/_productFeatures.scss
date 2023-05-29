@@ -1,11 +1,10 @@
 @use "../abstracts/" as *;
 .productFeatures {
   display: flex;
-  padding: 0 rem(165);
   gap: rem(125);
   margin-bottom: rem(160);
   &__features {
-    max-width: rem(635);
+    flex: 1;
     .heading--2 {
       margin-bottom: rem(32);
     }

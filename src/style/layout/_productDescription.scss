@@ -2,12 +2,12 @@
 .productDescription {
   display: flex;
   align-items: center;
-  padding: 0 rem(165);
 
   margin-bottom: rem(160);
   gap: rem(124);
   &__image {
-    max-width: rem(540);
+    width: 100%;
+    height: auto;
     border-radius: rem(8);
   }
   &__textBox {

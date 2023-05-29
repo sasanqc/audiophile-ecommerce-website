@@ -10,10 +10,13 @@ const Home = () => {
   return (
     <main className="home">
       <Hero />
-      <Categories />
-      <SampleProduct />
-      <SecondSampleProduct />
-      <Eearphones />
+      <div className="pageContainer">
+        <Categories />
+        <SampleProduct />
+        <SecondSampleProduct />
+        <Eearphones />
+      </div>
+
       <Feature />
       <Footer />
     </main>

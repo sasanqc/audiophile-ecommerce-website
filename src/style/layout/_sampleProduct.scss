@@ -1,8 +1,6 @@
 @use "../abstracts/" as *;
 .sampleProduct {
   background-color: var(--clr-primary);
-  margin-left: rem(165);
-  margin-right: rem(165);
   display: block;
   border-radius: rem(8);
   position: relative;

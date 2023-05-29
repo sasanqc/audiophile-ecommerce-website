@@ -6,7 +6,7 @@ import Header from "../layout/Header";
 import RadioInput from "../components/UI/RadioInput";
 const Checkout = () => {
   return (
-    <div className="checkout">
+    <main className="checkout">
       <Header />
       <a href="#home" className="body productDetail__goBack">
         Go Back
@@ -151,7 +151,7 @@ const Checkout = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </main>
   );
 };
 

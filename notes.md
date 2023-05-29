@@ -1,0 +1,3 @@
+<BrowserRouter>
+    <App />
+  </BrowserRouter>

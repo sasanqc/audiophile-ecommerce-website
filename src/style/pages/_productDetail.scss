@@ -4,8 +4,7 @@
     display: inline-block;
     margin-top: rem(80);
     margin-bottom: rem(56);
-    margin-left: rem(165);
-    margin-right: rem(165);
+
     opacity: 0.5;
     color: var(--clr-dark);
   }
@@ -14,7 +13,7 @@
     gap: rem(30);
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: rem(280) rem(280);
-    padding: 0 rem(165);
+
     margin-bottom: rem(160);
   }
 

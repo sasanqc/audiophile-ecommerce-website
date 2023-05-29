@@ -16,11 +16,13 @@ const Feature = () => {
           best place to buy your portable audio equipment.
         </p>
       </div>
-      <img
-        src="/images/home/desktop/image-best-gear.jpg"
-        alt=""
-        className="feature__image"
-      />
+      <div className="feature__imageContainer">
+        <img
+          src="/images/home/desktop/image-best-gear.jpg"
+          alt="best audio gear"
+          className="feature__image"
+        />
+      </div>
     </section>
   );
 };

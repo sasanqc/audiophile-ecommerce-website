@@ -1,11 +1,12 @@
 @use "../abstracts/" as *;
 .categoryCard {
-  width: rem(350);
+  max-width: rem(350);
   text-align: center;
   background-color: var(--clr-light-3);
   border-radius: rem(8);
   position: relative;
   display: inline-block;
+
   &__image {
     max-width: rem(210);
     position: absolute;

@@ -23,3 +23,7 @@
 # category page
 
 1 hour
+
+# checkout form
+
+3 hour
