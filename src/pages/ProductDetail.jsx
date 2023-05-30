@@ -1,11 +1,10 @@
 import React from "react";
-import Header from "../layout/Header";
 import ProductDescription from "../components/ProductDescription";
 import ProductFeatures from "../components/ProductFeatures";
 import YouMayLike from "../components/YouMayLike";
 import ProductImages from "../components/ProductImages";
 import Categories from "../components/Categories";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import AppShell from "../layout/AppShell";
 import data from "../data.json";
 const ProductDetail = () => {
@@ -15,19 +14,23 @@ const ProductDetail = () => {
   return (
     <AppShell className={"productDetail"}>
       <div className="pageContainer">
-        <a href="#home" className="body productDetail__goBack">
+        <NavLink to={-1} className="body productDetail__goBack">
           Go Back
-        </a>
+        </NavLink>
         <ProductDescription
           name={product.name}
           description={product.description}
           isNew={product.new}
           price={product.price}
           image={product.image}
+          slug={product.slug}
         />
-        <ProductFeatures />
-        <ProductImages />
-        <YouMayLike />
+        <ProductFeatures
+          features={product.features}
+          includes={product.includes}
+        />
+        <ProductImages gallery={product.gallery} />
+        <YouMayLike others={product.others} />
         <Categories />
       </div>
     </AppShell>

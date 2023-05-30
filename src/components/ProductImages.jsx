@@ -1,20 +1,20 @@
 import React from "react";
 
-const ProductImages = () => {
+const ProductImages = ({ gallery }) => {
   return (
     <div className="productDetail__images">
       <img
-        src="/images/home/desktop/image-best-gear.jpg"
+        src={gallery.first.desktop}
         alt=""
         className="productDetail__image productDetail__image--1"
       />
       <img
-        src="/images/home/desktop/image-best-gear.jpg"
+        src={gallery.second.desktop}
         alt=""
         className="productDetail__image productDetail__image--2"
       />
       <img
-        src="/images/home/desktop/image-best-gear.jpg"
+        src={gallery.third.desktop}
         alt=""
         className="productDetail__image productDetail__image--3"
       />

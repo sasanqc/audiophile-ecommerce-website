@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useImperativeHandle, forwardRef } from "react";
 import { ReactComponent as MinusIcon } from "../../assets/icons/icon-minus.svg";
 import { ReactComponent as PlusIcon } from "../../assets/icons/icon-plus.svg";
-const NumberInput = ({ initial, onChange }) => {
+
+const NumberInput = ({ initial, onChange }, ref) => {
   const [value, setValue] = useState(initial || 0);
+
   const handleIncrease = () => {
     onChange(value + 1);
     setValue(value + 1);
   };
+
   const handleDecrease = () => {
     if (value === 1) {
       return;
@@ -14,6 +17,11 @@ const NumberInput = ({ initial, onChange }) => {
     onChange(value - 1);
     setValue(value - 1);
   };
+  useImperativeHandle(ref, () => ({
+    get: () => {
+      return value;
+    },
+  }));
   return (
     <div className="numberInput">
       <MinusIcon className="numberInput__icon" onClick={handleDecrease} />
@@ -23,4 +31,4 @@ const NumberInput = ({ initial, onChange }) => {
   );
 };
 
-export default NumberInput;
+export default forwardRef(NumberInput);

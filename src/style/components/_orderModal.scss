@@ -1,13 +1,13 @@
 @use "../abstracts/" as *;
 .orderModal {
-  width: rem(540);
-  position: absolute;
+  position: fixed;
   display: table;
   top: 50%;
   left: 50%;
   padding: rem(48);
   border-radius: rem(8);
   transform: translate(-50%, -50%);
+  background-color: var(--clr-light-1);
   &__tickIcon {
     width: rem(64);
     height: rem(64);
@@ -45,8 +45,6 @@
   &__firstProduct {
     display: flex;
     padding-bottom: rem(12);
-    border-bottom: 1px solid rgba(#000000, 0.08);
-    margin-bottom: rem(12);
   }
   &__moreItems {
     text-align: center;
@@ -54,6 +52,8 @@
     line-height: rem(16);
     letter-spacing: rem(-0.214286);
     opacity: 0.5;
+    padding-top: rem(12);
+    border-top: 1px solid rgba(#000000, 0.08);
   }
   &__total {
     background-color: #000000;

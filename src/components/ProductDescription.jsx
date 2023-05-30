@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import NumberInput from "./UI/NumberInput";
 import Button from "./UI/Button";
-const ProductDescription = ({ description, isNew, price, name, image }) => {
-  console.log("dddd: ", image.desktop);
+import { useStore } from "../store";
+const ProductDescription = ({
+  description,
+  isNew,
+  price,
+  name,
+  image,
+  slug,
+}) => {
+  const inputRef = useRef();
+  const dispatch = useStore(false)[1];
+  const onAddToCard = () => {
+    dispatch("ADD_CART", { quantity: inputRef.current.get(), slug });
+  };
+  
   return (
     <article className="productDescription">
       <div className="productDescription__imageContainer">
@@ -19,8 +32,12 @@ const ProductDescription = ({ description, isNew, price, name, image }) => {
         <p className="body">{description}</p>
         <h6 className="heading--6">{`$ ${price}`} </h6>
         <div className="productDescription__actions">
-          <NumberInput onChange={() => {}} initial={0} />
-          <Button type={"primary"} label={"add to card"} />
+          <NumberInput onChange={() => {}} initial={1} ref={inputRef} />
+          <Button
+            type={"primary"}
+            label={"add to card"}
+            onClick={onAddToCard}
+          />
         </div>
       </div>
     </article>

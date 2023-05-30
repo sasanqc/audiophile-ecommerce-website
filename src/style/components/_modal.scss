@@ -1,0 +1,23 @@
+@use "../abstracts/" as *;
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 99;
+}
+.overlay {
+  position: fixed;
+  z-index: 100;
+
+  animation: topToBottom 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.11);
+}
+@keyframes topToBottom {
+  from {
+    top: -100%;
+  }
+  to {
+    // top: 50%;
+  }
+}

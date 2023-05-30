@@ -1,9 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
-import data from "./data.json";
+import { useStore } from "./store";
 import ProductDetail from "./pages/ProductDetail";
+import Checkout from "./pages/Checkout";
+
 function App() {
+  const { products } = useStore()[0];
   return (
     <Routes>
       <Route path="/home" element={<Home />} />
@@ -14,7 +17,7 @@ function App() {
             path={`/${cat}`}
             element={
               <Category
-                data={data.filter((el) => el.category === cat)}
+                data={products.filter((el) => el.category === cat)}
                 title={cat}
               />
             }
@@ -22,6 +25,7 @@ function App() {
           <Route path={`/${cat}/:slug`} element={<ProductDetail />} />
         </>
       ))}
+      <Route path="/checkout" element={<Checkout />} />
     </Routes>
   );
 }
