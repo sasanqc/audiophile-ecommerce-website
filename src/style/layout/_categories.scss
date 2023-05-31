@@ -14,4 +14,22 @@
     flex: 1;
     text-align: center;
   }
+  @include respond(tab-port) {
+    &__list {
+      gap: rem(10);
+    }
+    margin-bottom: rem(96);
+  }
+  @include respond(phone) {
+    &__list {
+      gap: rem(68, $fs-s);
+      flex-direction: column;
+    }
+    &__item {
+      width: 100%;
+      flex: 1;
+      text-align: center;
+    }
+    margin-bottom: rem(120, $fs-s);
+  }
 }

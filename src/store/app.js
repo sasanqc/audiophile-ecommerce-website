@@ -23,9 +23,13 @@ const configureStore = () => {
       updatedCart[existsIndex].quantity = quantity;
       return { cart: updatedCart };
     },
+    TOGGLE_MENU: (state) => {
+      const newMenuState = !state.ui.menuIsOpen;
+      return { ui: { ...state.ui, menuIsOpen: newMenuState } };
+    },
   };
 
-  initStore(actions, { products, cart: [] });
+  initStore(actions, { products, cart: [], ui: { menuIsOpen: false } });
 };
 
 export default configureStore;

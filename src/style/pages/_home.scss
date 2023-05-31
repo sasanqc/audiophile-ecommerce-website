@@ -2,10 +2,12 @@
 
 .home {
   &__hero {
-    background-image: url("../../assets/images/home/desktop/image-hero.jpg");
-    background-position: center;
-    background-size: cover;
+    // background-image: url("../../assets/images/home/desktop/image-hero.jpg");
+    // background-position: center;
+    // background-size: contain;
+    // background-repeat: no-repeat;
     margin-bottom: rem(200);
+    background-color: black;
   }
 
   .header {
@@ -15,5 +17,32 @@
     padding-left: 0;
     padding-right: 0;
     border-bottom: 1px solid rgba($color: white, $alpha: 0.2);
+  }
+  @include respond(tab-land) {
+    .header {
+      margin-left: rem(64, $fs-m);
+      margin-right: rem(64, $fs-m);
+    }
+  }
+  @include respond(tab-port) {
+    &__hero {
+      // background-image: url("../../assets/images/home/tablet/image-header.jpg");
+      // background-position: center;
+      // background-size: contain;
+      margin-bottom: rem(148);
+      text-align: center;
+    }
+    .header {
+      margin-left: rem(40);
+      margin-right: rem(40);
+    }
+  }
+  @include respond(phone) {
+    .header {
+      margin-left: rem(0);
+      margin-right: rem(0);
+      padding-left: rem(24, $fs-s);
+      padding-right: rem(24, $fs-s);
+    }
   }
 }

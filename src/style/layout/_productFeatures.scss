@@ -29,4 +29,21 @@
       font-weight: 700;
     }
   }
+  @include respond(tab-port) {
+    flex-direction: column;
+    margin-bottom: rem(120, $fs-s);
+    &__inTheBox {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @include respond(phone) {
+    &__inTheBox {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }

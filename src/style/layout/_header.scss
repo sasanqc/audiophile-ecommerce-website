@@ -5,9 +5,21 @@
   align-items: center;
   justify-content: space-between;
   padding: rem(32) rem(165);
+  position: relative;
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: rem(42);
+  }
+
+  &__menu {
+    display: none;
+  }
+
   &__logo {
     cursor: pointer;
   }
+
   &__shopIcon {
     width: rem(24);
     color: var(--clr-light-1);
@@ -15,6 +27,52 @@
     transition: all 0.25s ease;
     &:hover {
       color: var(--clr-primary);
+    }
+  }
+
+  @include respond(tab-land) {
+    padding: rem(32) rem(64, $fs-m);
+  }
+
+  @include respond(tab-port) {
+    padding: rem(32) rem(40);
+    &__menu {
+      cursor: pointer;
+      color: var(--clr-light-1);
+      display: block;
+    }
+    &__menuContainer {
+      width: 100vw;
+      background-color: var(--clr-light-1);
+      padding: rem(108, $fs-s) rem(40, $fs-s) rem(3, $fs-s) rem(40, $fs-s);
+      position: absolute;
+      top: 0;
+      border-bottom-left-radius: rem(8);
+      border-bottom-right-radius: rem(8);
+      overflow-y: scroll;
+      height: calc(100vh - rem(90, $fs-s));
+    }
+    &__menuBackdrop {
+      top: 100%;
+      left: 0;
+      position: absolute;
+      height: 100vh;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      z-index: 100;
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  @include respond(phone) {
+    padding: rem(32) rem(24, $fs-s);
+    &__left {
+      .header__logo {
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 }

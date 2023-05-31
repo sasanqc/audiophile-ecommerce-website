@@ -2,4 +2,16 @@
 .pageContainer {
   padding-left: rem(165);
   padding-right: rem(165);
+  @include respond(tab-land) {
+    padding-left: rem(64, $fs-m);
+    padding-right: rem(64, $fs-m);
+  }
+  @include respond(tab-port) {
+    padding-left: rem(40, $fs-s);
+    padding-right: rem(40, $fs-s);
+  }
+  @include respond(phone) {
+    padding-left: rem(24, $fs-s);
+    padding-right: rem(24, $fs-s);
+  }
 }

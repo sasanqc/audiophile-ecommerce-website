@@ -3,7 +3,7 @@
   padding: rem(33);
   border-radius: rem(8);
   background-color: var(--clr-light-1);
-  min-width: rem(350);
+  min-width: rem(500);
   position: fixed;
   top: rem(96);
   right: rem(165);
@@ -69,5 +69,16 @@
   }
   .btn--primary {
     width: 100%;
+  }
+  @include respond(tab-land) {
+    right: rem(64);
+  }
+  @include respond(tab-port) {
+    right: rem(40);
+  }
+  @include respond(phone) {
+    right: rem(24);
+    min-width: calc(100% - 48px);
+    left: rem(24, $fs-s);
   }
 }

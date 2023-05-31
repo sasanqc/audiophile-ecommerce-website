@@ -12,23 +12,39 @@
   }
   &__textBox {
     max-width: rem(445);
+    .text--overline {
+      color: var(--clr-primary);
+      margin-bottom: rem(16);
+    }
+    .heading--2 {
+      margin-bottom: rem(32);
+    }
+    .body {
+      opacity: 0.5;
+      margin-bottom: rem(32);
+    }
+    .heading--6 {
+      margin-bottom: rem(47);
+    }
   }
   &__actions {
     display: flex;
     gap: rem(16);
   }
-  .text--overline {
-    color: var(--clr-primary);
-    margin-bottom: rem(16);
+
+  @include respond(tab-port) {
+    gap: rem(69, $fs-s);
+
+    &__textBox {
+      max-width: rem(339, $fs-s);
+    }
+    margin-bottom: rem(120, $fs-s);
   }
-  .heading--2 {
-    margin-bottom: rem(32);
-  }
-  .body {
-    opacity: 0.5;
-    margin-bottom: rem(32);
-  }
-  .heading--6 {
-    margin-bottom: rem(47);
+  @include respond(phone) {
+    flex-direction: column;
+    margin-bottom: rem(88, $fs-s);
+    &__textBox {
+      max-width: 100%;
+    }
   }
 }

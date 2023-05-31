@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: rem(200);
+
   gap: rem(125);
   &__textBox {
     max-width: rem(445);
@@ -21,13 +22,49 @@
       opacity: 0.5;
     }
   }
-  &__imageContainer {
-    // max-width: 50%;
-  }
+
   &__image {
     width: 100%;
     height: auto;
     border-radius: rem(8);
     object-fit: cover;
+  }
+  &__imageContainer {
+    width: 100%;
+  }
+  @include respond(tab-land) {
+    margin: 0 rem(64, $fs-m);
+    margin-bottom: rem(200);
+  }
+  @include respond(tab-port) {
+    margin: 0 rem(40);
+    flex-direction: column-reverse;
+    justify-content: start;
+    gap: rem(64, $fs-s);
+    &__textBox {
+      max-width: 100%;
+      padding-left: rem(64, $fs-s);
+      padding-right: rem(64, $fs-s);
+      text-align: center;
+      margin-bottom: rem(96, $fs-s);
+    }
+    &__imageContainer {
+      width: 100%;
+      height: auto;
+    }
+    &__image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @include respond(phone) {
+    gap: rem(40, $fs-s);
+    &__textBox {
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+      margin-bottom: rem(120, $fs-s);
+    }
   }
 }

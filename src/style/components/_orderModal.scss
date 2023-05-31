@@ -8,6 +8,7 @@
   border-radius: rem(8);
   transform: translate(-50%, -50%);
   background-color: var(--clr-light-1);
+
   &__tickIcon {
     width: rem(64);
     height: rem(64);
@@ -36,6 +37,7 @@
   &__details {
     background-color: var(--clr-light-3);
     padding: rem(24);
+    flex: 1;
   }
   &__image {
     width: rem(50);
@@ -57,13 +59,31 @@
   }
   &__total {
     background-color: #000000;
-    flex: 1;
+    width: 40%;
     color: white;
     text-transform: uppercase;
     padding: rem(41) rem(32);
     :first-child {
       opacity: 0.5;
       margin-bottom: rem(8);
+    }
+  }
+  @include respond(tab-port) {
+    &__total {
+      padding: rem(41, $fs-s) rem(24, $fs-s);
+    }
+    min-width: 70%;
+  }
+  @include respond(phone) {
+    padding: rem(24, $fs-s);
+    min-width: calc(100% - 24px);
+    &__items {
+      flex-direction: column;
+      margin-bottom: rem(24, $fs-s);
+    }
+    &__total {
+      width: 100%;
+      padding: rem(16, $fs-s) rem(24, $fs-s);
     }
   }
 }

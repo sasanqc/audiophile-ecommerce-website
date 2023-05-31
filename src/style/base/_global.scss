@@ -20,5 +20,10 @@ body {
   color: var(--clr-dark-1);
   font-size: rem(15);
   line-height: rem(25);
+
   font-weight: 500;
+}
+body.unscrollable {
+  overflow: hidden;
+  height: 100vh;
 }

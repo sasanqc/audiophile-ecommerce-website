@@ -16,4 +16,9 @@
   .heading--5 {
     margin-bottom: rem(32);
   }
+  @include respond(phone) {
+    flex-direction: column;
+    gap: rem(56, $fs-s);
+    margin-bottom: rem(172, $fs-s);
+  }
 }

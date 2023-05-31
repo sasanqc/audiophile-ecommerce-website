@@ -5,15 +5,29 @@ const Categories = () => {
   const items = [
     {
       name: "headphones",
-      image: "/images/home/desktop/image-category-thumbnail-headphones.png",
+      image: {
+        desktop:
+          "/images/shared/desktop/image-category-thumbnail-headphones.png",
+        tablet: "/images/shared/tablet/image-category-thumbnail-headphones.png",
+        mobile: "/images/shared/mobile/image-category-thumbnail-headphones.png",
+      },
     },
     {
       name: "speakers",
-      image: "/images/home/desktop/image-category-thumbnail-speakers.png",
+      image: {
+        desktop: "/images/shared/desktop/image-category-thumbnail-speakers.png",
+        tablet: "/images/shared/tablet/image-category-thumbnail-speakers.png",
+        mobile: "/images/shared/mobile/image-category-thumbnail-speakers.png",
+      },
     },
     {
       name: "earphones",
-      image: "/images/home/desktop/image-category-thumbnail-earphones.png",
+      image: {
+        desktop:
+          "/images/shared/desktop/image-category-thumbnail-earphones.png",
+        tablet: "/images/shared/tablet/image-category-thumbnail-earphones.png",
+        mobile: "/images/shared/mobile/image-category-thumbnail-earphones.png",
+      },
     },
   ];
   return (
@@ -21,7 +35,11 @@ const Categories = () => {
       <ul className="categories__list">
         {items.map((item, index) => (
           <li className="categories__item">
-            <CategoryCard name={item.name} image={item.image} key={index} />
+            <CategoryCard
+              name={item.name}
+              image={item.image.desktop}
+              key={index}
+            />
           </li>
         ))}
       </ul>

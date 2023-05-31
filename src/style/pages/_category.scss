@@ -11,4 +11,18 @@
   [class~="productReview"]:last-of-type {
     margin-bottom: rem(240);
   }
+  @include respond(tab-port) {
+    [class~="productReview"]:last-of-type {
+      margin-bottom: rem(170, $fs-s);
+    }
+    &__title {
+      margin-bottom: rem(120, $fs-s);
+    }
+  }
+  @include respond(phone) {
+    &__title {
+      padding: rem(32, $fs-s);
+      margin-bottom: rem(64, $fs-s);
+    }
+  }
 }

@@ -15,15 +15,19 @@ const ProductDescription = ({
   const onAddToCard = () => {
     dispatch("ADD_CART", { quantity: inputRef.current.get(), slug });
   };
-  
+
   return (
     <article className="productDescription">
       <div className="productDescription__imageContainer">
-        <img
-          src={image.desktop}
-          alt="product description"
-          className="productDescription__image"
-        />
+        <picture>
+          <source srcset={image.mobile} media="(max-width: 600px)" />
+          <source srcset={image.tablet} media="(max-width: 900px)" />
+          <img
+            src={image.desktop}
+            alt="product description"
+            className="productDescription__image"
+          />
+        </picture>
       </div>
 
       <div className="productDescription__textBox">

@@ -15,7 +15,15 @@ const YouMayLike = ({ others = [] }) => {
       {others.map((el) => (
         <div className="youMayLike__item" key={el.slug}>
           <div className="youMayLike__imageContainer">
-            <img src={el.image.desktop} alt="" className="youMayLike__image" />
+            <picture className="youMayLike__picture">
+              <source srcset={el.image.mobile} media="(max-width: 600px)" />
+              <source srcset={el.image.tablet} media="(max-width: 900px)" />
+              <img
+                src={el.image.desktop}
+                alt=""
+                className="youMayLike__image"
+              />
+            </picture>
           </div>
 
           <h5 className="heading--5">{el.name}</h5>

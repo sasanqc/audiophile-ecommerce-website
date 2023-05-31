@@ -8,11 +8,18 @@ const ProductReview = ({ dir, description, isNew, name, image, slug }) => {
   };
   return (
     <article className={`productReview productReview--${dir}`}>
-      {dir === "right" && (
-        <div className="productReview__imageContainer">
-          <img src={image.desktop} alt="" className="productReview__image" />
-        </div>
-      )}
+      <div className="productReview__imageContainer">
+        <picture>
+          <source srcset={image.mobile} media="(max-width: 600px)" />
+          <source srcset={image.tablet} media="(max-width: 900px)" />
+          <img
+            className="productReview__image"
+            src={image.desktop}
+            alt="product review"
+          />
+        </picture>
+      </div>
+
       <div className="productReview__textBox">
         {isNew && <p className="text--overline">new product</p>}
         <h2 className="heading--2">{name}</h2>
@@ -23,11 +30,6 @@ const ProductReview = ({ dir, description, isNew, name, image, slug }) => {
           onClick={handleSeeProduct}
         />
       </div>
-      {dir === "left" && (
-        <div className="">
-          <img src={image.desktop} alt="" className="productReview__image" />
-        </div>
-      )}
     </article>
   );
 };

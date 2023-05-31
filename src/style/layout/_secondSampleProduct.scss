@@ -12,4 +12,11 @@
     margin-bottom: rem(32);
   }
   margin-bottom: rem(48);
+  @include respond(tab-port) {
+    margin-bottom: rem(32, $fs-s);
+  }
+  @include respond(phone) {
+    padding: rem(41, $fs-s) rem(24, $fs-s);
+    margin-bottom: rem(24, $fs-s);
+  }
 }

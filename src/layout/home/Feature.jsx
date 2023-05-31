@@ -17,11 +17,21 @@ const Feature = () => {
         </p>
       </div>
       <div className="feature__imageContainer">
-        <img
-          src="/images/home/desktop/image-best-gear.jpg"
-          alt="best audio gear"
-          className="feature__image"
-        />
+        <picture>
+          <source
+            srcset="/images/shared/mobile/image-best-gear.jpg"
+            media="(max-width: 600px)"
+          />
+          <source
+            srcset="/images/shared/tablet/image-best-gear.jpg"
+            media="(max-width: 900px)"
+          />
+          <img
+            className="feature__image"
+            src="/images/shared/desktop/image-best-gear.jpg"
+            alt="best audio gear"
+          />
+        </picture>
       </div>
     </section>
   );

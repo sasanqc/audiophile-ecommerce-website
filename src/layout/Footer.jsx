@@ -24,7 +24,14 @@ const Footer = () => {
           <InstagramIcon />
         </div>
       </div>
-      <p className="body">Copyright 2021. All Rights Reserved</p>
+      <div className="footer__copyright">
+        <p className="body">Copyright 2021. All Rights Reserved</p>
+        <div className="footer__socialIcons">
+          <FacebookIcon />
+          <TwitterIcon />
+          <InstagramIcon />
+        </div>
+      </div>
     </footer>
   );
 };

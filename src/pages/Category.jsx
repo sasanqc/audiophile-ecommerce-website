@@ -16,7 +16,7 @@ const Category = ({ data, title }) => {
             isNew={el.new}
             name={el.name}
             description={el.description}
-            image={el.image}
+            image={el.categoryImage}
             slug={el.slug}
           />
         ))}
