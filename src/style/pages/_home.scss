@@ -1,41 +1,17 @@
 @use "../abstracts/" as *;
 
 .home {
-  &__hero {
-    // background-image: url("../../assets/images/home/desktop/image-hero.jpg");
-    // background-position: center;
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    margin-bottom: rem(200);
-    background-color: black;
-  }
-
-  .header {
-    background-color: transparent;
-    margin-left: rem(165);
-    margin-right: rem(165);
-    padding-left: 0;
-    padding-right: 0;
-    border-bottom: 1px solid rgba($color: white, $alpha: 0.2);
-  }
   @include respond(tab-land) {
-    .header {
-      margin-left: rem(64, $fs-m);
-      margin-right: rem(64, $fs-m);
-    }
+    // .header {
+    //   margin-left: rem(64, $fs-m);
+    //   margin-right: rem(64, $fs-m);
+    // }
   }
   @include respond(tab-port) {
-    &__hero {
-      // background-image: url("../../assets/images/home/tablet/image-header.jpg");
-      // background-position: center;
-      // background-size: contain;
-      margin-bottom: rem(148);
-      text-align: center;
-    }
-    .header {
-      margin-left: rem(40);
-      margin-right: rem(40);
-    }
+    // .header {
+    //   margin-left: rem(40);
+    //   margin-right: rem(40);
+    // }
   }
   @include respond(phone) {
     .header {

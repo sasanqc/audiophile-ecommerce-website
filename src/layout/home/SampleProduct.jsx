@@ -1,6 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/UI/Button";
 const SampleProduct = () => {
+  const navigate = useNavigate();
+  const handleSeeProduct = () => {
+    navigate("/speakers/zx9-speaker");
+  };
   return (
     <section className="sampleProduct">
       <div className="sampleProduct__imageContainer">
@@ -17,7 +22,11 @@ const SampleProduct = () => {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </p>
-        <Button type={"dark"} label={"see product"} />
+        <Button
+          type={"dark"}
+          label={"see product"}
+          onClick={handleSeeProduct}
+        />
       </div>
     </section>
   );

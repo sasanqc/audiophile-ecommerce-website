@@ -6,9 +6,11 @@ import SecondSampleProduct from "../layout/home/SecondSampleProduct";
 import Eearphones from "../layout/home/Eearphones";
 import Feature from "../layout/home/Feature";
 import Footer from "../layout/Footer";
+import Header from "../layout/Header";
 const Home = () => {
   return (
     <main className="home">
+      <Header />
       <Hero />
       <div className="pageContainer">
         <Categories />

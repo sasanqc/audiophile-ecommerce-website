@@ -1,14 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { ReactComponent as LogoIcon } from "../assets/icons/logo.svg";
 import { ReactComponent as FacebookIcon } from "../assets/icons/icon-facebook.svg";
 import { ReactComponent as TwitterIcon } from "../assets/icons/icon-twitter.svg";
 import { ReactComponent as InstagramIcon } from "../assets/icons/icon-instagram.svg";
 import Navigation from "../components/Navigation";
 const Footer = () => {
+  const navigate = useNavigate();
+  const handleClickLogo = () => {
+    navigate("/home");
+  };
   return (
     <footer className="footer">
       <div className="footer__navigation">
-        <LogoIcon className="header__logo" />
+        <LogoIcon className="header__logo" onClick={handleClickLogo} />
         <Navigation />
       </div>
       <div className="footer__about">

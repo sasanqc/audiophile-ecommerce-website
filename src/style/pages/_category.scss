@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 .category {
   &__title {
-    background-color: var(--clr-dark-1);
+    background-color: var(--clr-dark-3);
     color: var(--clr-light-1);
     padding: rem(98);
     text-align: center;

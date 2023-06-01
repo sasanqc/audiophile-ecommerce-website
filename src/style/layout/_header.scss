@@ -1,17 +1,38 @@
 @use "../abstracts/" as *;
 .header {
-  background-color: var(--clr-dark-2);
+  background-color: var(--clr-dark-3);
+  border-bottom: 1px solid rgba($color: white, $alpha: 0.2);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: rem(32) rem(165);
   position: relative;
+  width: 100%;
+  &--sticky {
+    position: fixed;
+  }
+  // margin-bottom: 100px;
+  z-index: 100;
   &__left {
     display: flex;
     align-items: center;
     gap: rem(42);
   }
-
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: rem(165);
+    bottom: -1px;
+    border-bottom: 1px solid var(--clr-dark-3);
+  }
+  &::before {
+    right: 0;
+  }
+  &::after {
+    left: 0;
+  }
   &__menu {
     display: none;
   }
@@ -32,10 +53,18 @@
 
   @include respond(tab-land) {
     padding: rem(32) rem(64, $fs-m);
+    &::after,
+    &::before {
+      width: rem(64, $fs-m);
+    }
   }
 
   @include respond(tab-port) {
-    padding: rem(32) rem(40);
+    padding: rem(32) rem(40, $fs-s);
+    &::after,
+    &::before {
+      width: rem(40, $fs-s);
+    }
     &__menu {
       cursor: pointer;
       color: var(--clr-light-1);
@@ -66,6 +95,10 @@
 
   @include respond(phone) {
     padding: rem(32) rem(24, $fs-s);
+    &::after,
+    &::before {
+      width: rem(0, $fs-s);
+    }
     &__left {
       .header__logo {
         cursor: pointer;

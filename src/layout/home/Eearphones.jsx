@@ -1,6 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/UI/Button";
 const Eearphones = () => {
+  const navigate = useNavigate();
+  const handleSeeProduct = () => {
+    navigate("/earphones/yx1-earphones");
+  };
   return (
     <section className="earphones">
       <img
@@ -10,7 +15,11 @@ const Eearphones = () => {
       />
       <div className="earphones__seeMore">
         <h4 className="heading--4">YX1 EARPHONES</h4>
-        <Button type={"outline"} label={"see product"} />
+        <Button
+          type={"outline"}
+          label={"see product"}
+          onClick={handleSeeProduct}
+        />
       </div>
     </section>
   );

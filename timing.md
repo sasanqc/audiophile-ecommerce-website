@@ -37,3 +37,5 @@
 # start 09:15 1402/03/10
 
 # responsiveness
+
+7 hour
