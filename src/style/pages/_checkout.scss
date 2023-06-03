@@ -63,6 +63,22 @@
       margin-top: rem(8);
     }
   }
+  &__cashOnDelivery {
+    width: 100%;
+    display: flex;
+
+    grid-column: 1/-1;
+    gap: rem(32);
+    .body {
+      opacity: 0.5;
+    }
+  }
+  &__cashIcon {
+    width: rem(48);
+    height: rem(48);
+    color: var(--clr-primary);
+  }
+
   .summary {
     flex: 1;
     max-width: rem(350);

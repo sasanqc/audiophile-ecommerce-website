@@ -29,7 +29,7 @@ const Footer = () => {
           <InstagramIcon />
         </div>
       </div>
-      <div className="footer__copyright">
+      <div className="u-flexBetween footer__copyright">
         <p className="body">Copyright 2021. All Rights Reserved</p>
         <div className="footer__socialIcons">
           <FacebookIcon />

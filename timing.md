@@ -39,3 +39,7 @@
 # responsiveness
 
 7 hour
+
+# final responsive and bug fiex
+
+4 hour

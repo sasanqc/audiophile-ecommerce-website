@@ -48,7 +48,7 @@ const Header = () => {
     }
   }
   return (
-    <header className="header" ref={headerRef}>
+    <header className="u-flexBetween header" ref={headerRef}>
       {showCart && (
         <Modal onBackdropClicked={() => setShowCart(false)}>
           <Cart onCheckoutClick={handleCheckoutClick} />

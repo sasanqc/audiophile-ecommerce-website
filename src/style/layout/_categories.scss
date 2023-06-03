@@ -2,9 +2,6 @@
 .categories {
   display: block;
   &__list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: rem(30);
   }
   margin-bottom: rem(168);

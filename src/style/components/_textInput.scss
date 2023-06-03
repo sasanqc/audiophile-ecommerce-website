@@ -26,9 +26,7 @@
   &--error {
     .textInput__label {
       color: #cd2c2c;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+
       &::after {
         content: "Wrong format";
         font-weight: 500;

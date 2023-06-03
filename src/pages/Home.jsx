@@ -4,13 +4,10 @@ import Hero from "../layout/home/Hero";
 import SampleProduct from "../layout/home/SampleProduct";
 import SecondSampleProduct from "../layout/home/SecondSampleProduct";
 import Eearphones from "../layout/home/Eearphones";
-import Feature from "../layout/home/Feature";
-import Footer from "../layout/Footer";
-import Header from "../layout/Header";
+import AppShell from "../layout/AppShell";
 const Home = () => {
   return (
-    <main className="home">
-      <Header />
+    <AppShell className={"home"}>
       <Hero />
       <div className="pageContainer">
         <Categories />
@@ -18,10 +15,7 @@ const Home = () => {
         <SecondSampleProduct />
         <Eearphones />
       </div>
-
-      <Feature />
-      <Footer />
-    </main>
+    </AppShell>
   );
 };
 

@@ -1,10 +1,7 @@
 @use "../abstracts/" as *;
 .productReview {
-  display: flex;
-  align-items: center;
-  margin-bottom: rem(160);
-  justify-content: space-between;
   gap: rem(125);
+  margin-bottom: rem(160);
   &__imageContainer {
     width: 100%;
   }

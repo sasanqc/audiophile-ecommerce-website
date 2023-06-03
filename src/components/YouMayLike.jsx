@@ -12,28 +12,31 @@ const YouMayLike = ({ others = [] }) => {
   };
   return (
     <article className="youMayLike">
-      {others.map((el) => (
-        <div className="youMayLike__item" key={el.slug}>
-          <div className="youMayLike__imageContainer">
-            <picture className="youMayLike__picture">
-              <source srcset={el.image.mobile} media="(max-width: 600px)" />
-              <source srcset={el.image.tablet} media="(max-width: 900px)" />
-              <img
-                src={el.image.desktop}
-                alt=""
-                className="youMayLike__image"
-              />
-            </picture>
-          </div>
+      <h3 className="heading--3">you may like</h3>
+      <div className="u-flexBetween youMayLike__items">
+        {others.map((el) => (
+          <div className="youMayLike__item" key={el.slug}>
+            <div className="youMayLike__imageContainer">
+              <picture className="youMayLike__picture">
+                <source srcSet={el.image.mobile} media="(max-width: 600px)" />
+                <source srcSet={el.image.tablet} media="(max-width: 900px)" />
+                <img
+                  src={el.image.desktop}
+                  alt=""
+                  className="youMayLike__image"
+                />
+              </picture>
+            </div>
 
-          <h5 className="heading--5">{el.name}</h5>
-          <Button
-            label={"see product"}
-            type={"primary"}
-            onClick={() => handleClick(el.slug)}
-          />
-        </div>
-      ))}
+            <h5 className="heading--5">{el.name}</h5>
+            <Button
+              label={"see product"}
+              type={"primary"}
+              onClick={() => handleClick(el.slug)}
+            />
+          </div>
+        ))}
+      </div>
     </article>
   );
 };

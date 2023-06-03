@@ -5,7 +5,6 @@ import Categories from "../components/Categories";
 
 import AppShell from "../layout/AppShell";
 const Category = ({ data, title }) => {
-  console.log(data);
   return (
     <AppShell className={"category"}>
       <h2 className="heading--2 category__title">{title}</h2>
@@ -18,6 +17,7 @@ const Category = ({ data, title }) => {
             description={el.description}
             image={el.categoryImage}
             slug={el.slug}
+            key={index}
           />
         ))}
 

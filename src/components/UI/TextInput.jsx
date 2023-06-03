@@ -1,10 +1,24 @@
 import React, { useState } from "react";
 
-const TextInput = ({ label, name, placeholder, type, initial }) => {
+const TextInput = ({
+  label,
+  name,
+  placeholder,
+  type,
+  initial,
+  error,
+  onChange,
+}) => {
   const [value, setValue] = useState(initial || "");
+  const handleChange = (e) => {
+    setValue(e.target.value);
+    if (onChange) {
+      onChange(name, e.target.value);
+    }
+  };
   return (
-    <div className="textInput">
-      <label htmlFor={name} className="textInput__label">
+    <div className={`textInput ${error ? "textInput--error" : ""}`}>
+      <label htmlFor={name} className="u-flexBetween textInput__label">
         {label}
       </label>
       <input
@@ -13,7 +27,7 @@ const TextInput = ({ label, name, placeholder, type, initial }) => {
         name={name}
         placeholder={placeholder}
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={handleChange}
       />
     </div>
   );

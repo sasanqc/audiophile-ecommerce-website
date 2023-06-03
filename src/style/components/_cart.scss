@@ -9,9 +9,7 @@
   right: rem(165);
   &__header {
     margin-bottom: rem(31);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
     button {
       border: none;
       outline: none;
@@ -19,6 +17,10 @@
       opacity: 0.5;
       cursor: pointer;
       text-decoration: underline;
+      &:hover {
+        color: var(--clr-primary);
+        opacity: 1;
+      }
     }
   }
 
@@ -58,9 +60,6 @@
     }
   }
   &__total {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     .body:first-child {
       text-transform: uppercase;
       opacity: 0.5;

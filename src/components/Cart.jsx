@@ -25,7 +25,7 @@ const Cart = ({ onCheckoutClick }) => {
   };
   return (
     <article className="cart">
-      <div className="cart__header">
+      <div className="u-flexBetween cart__header">
         <h6 className="heading--6">{`cart(${cart.length})`}</h6>
         <button onClick={handleRemoveAll}>Remove all</button>
       </div>
@@ -44,7 +44,7 @@ const Cart = ({ onCheckoutClick }) => {
           </li>
         ))}
       </ul>
-      <div className="cart__total">
+      <div className="u-flexBetween cart__total">
         <p className="body">total</p>
         <h6 className="heading--6">{`$ ${total}`}</h6>
       </div>

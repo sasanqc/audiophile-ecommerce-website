@@ -2,11 +2,21 @@
 .footer {
   background-color: var(--clr-dark-2);
   padding: rem(71) rem(165);
+  border-top: 4px solid var(--clr-dark-2);
+  position: relative;
+  &::before {
+    content: "";
+    border-top: 4px solid var(--clr-primary);
+    width: rem(101);
+    display: block;
+    position: absolute;
+    top: -4px;
+  }
   &__navigation {
+    margin-bottom: rem(36);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: rem(36);
   }
   &__about {
     display: flex;
@@ -58,11 +68,7 @@
     &__socialIcons {
       display: none;
     }
-    &__copyright {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+
     &__copyright &__socialIcons {
       display: flex;
       align-self: center;
@@ -72,7 +78,11 @@
   @include respond(phone) {
     &__navigation {
       text-align: center;
+      display: flex;
+      align-items: center;
       justify-content: center;
+      flex-direction: column;
+
       .header__logo {
         margin: 0 auto;
       }
@@ -84,6 +94,10 @@
     }
     .body {
       text-align: center;
+    }
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }

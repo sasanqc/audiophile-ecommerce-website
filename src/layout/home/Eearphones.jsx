@@ -8,11 +8,24 @@ const Eearphones = () => {
   };
   return (
     <section className="earphones">
-      <img
-        src="/images/home/desktop/image-earphones-yx1.jpg"
-        alt="earphone smaple product"
-        className="earphones__image"
-      />
+      <div className="earphones__imageContainer">
+        <picture>
+          <source
+            srcSet="/assets/home/mobile/image-earphones-yx1.jpg"
+            media="(max-width: 600px)"
+          />
+          <source
+            srcSet="/assets/home/tablet/image-earphones-yx1.jpg"
+            media="(max-width: 900px)"
+          />
+          <img
+            src="/assets/home/desktop/image-earphones-yx1.jpg"
+            alt="earphone smaple product"
+            className="earphones__image"
+          />
+        </picture>
+      </div>
+
       <div className="earphones__seeMore">
         <h4 className="heading--4">YX1 EARPHONES</h4>
         <Button

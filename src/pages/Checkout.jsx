@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Button from "../components/UI/Button";
+import React, { Fragment, useState } from "react";
 import TextInput from "../components/UI/TextInput";
 import Footer from "../layout/Footer";
 import Header from "../layout/Header";
@@ -8,10 +7,12 @@ import { NavLink } from "react-router-dom";
 import { useStore } from "../store";
 import Modal from "../components/UI/Modal";
 import OrderModal from "../components/OrderModal";
-
+import { ReactComponent as CashIcon } from "../assets/icons/icon-cash-on-delivery.svg";
+import Summary from "../components/Summary";
 const Checkout = () => {
   const [showOrderModal, setShowOrderModal] = useState(false);
-  const [paymentMehtod, setPaymentMethod] = useState("e-money");
+  const [paymentMethod, setPaymentMethod] = useState("e-money");
+  const [inputOnError, setError] = useState({});
   const { cart, products } = useStore()[0];
 
   const convertedCart = cart.map((el) => {
@@ -30,6 +31,16 @@ const Checkout = () => {
       return;
     }
     setShowOrderModal(true);
+  };
+  const handleChange = (name, value) => {
+    if (name === "email" && !value.includes("@") && value.length > 0) {
+      setError({ ...inputOnError, email: true });
+      return;
+    }
+    if (name === "email" && value.includes("@") && value.length > 2) {
+      setError({ ...inputOnError, email: false });
+      return;
+    }
   };
   return (
     <main className="checkout">
@@ -59,6 +70,8 @@ const Checkout = () => {
                 name={"email"}
                 label={"Email Address"}
                 placeholder={"alexei@mail.com"}
+                error={inputOnError?.email}
+                onChange={handleChange}
               />
               <TextInput
                 type={"text"}
@@ -103,76 +116,52 @@ const Checkout = () => {
                 onClick={() => {
                   setPaymentMethod("e-money");
                 }}
-                value={paymentMehtod === "e-money"}
+                value={paymentMethod === "e-money"}
               />
               <RadioInput
                 label={"Cash on Delivery"}
                 onClick={() => {
                   setPaymentMethod("cash-on-delivery");
                 }}
-                value={paymentMehtod === "cash-on-delivery"}
+                value={paymentMethod === "cash-on-delivery"}
               />
-              <TextInput
-                type={"text"}
-                name={"e-money-number"}
-                label={"e-Money Number"}
-                placeholder={"238521993"}
-              />
-              <TextInput
-                type={"text"}
-                name={"e-money-pin"}
-                label={"e-Money PIN"}
-                placeholder={"6891"}
-              />
+              {paymentMethod === "e-money" && (
+                <Fragment>
+                  <TextInput
+                    type={"text"}
+                    name={"e-money-number"}
+                    label={"e-Money Number"}
+                    placeholder={"238521993"}
+                  />
+                  <TextInput
+                    type={"text"}
+                    name={"e-money-pin"}
+                    label={"e-Money PIN"}
+                    placeholder={"6891"}
+                  />
+                </Fragment>
+              )}
+              {paymentMethod === "cash-on-delivery" && (
+                <div className="checkout__cashOnDelivery">
+                  <div className="">
+                    <CashIcon className="checkout__cashIcon" />
+                  </div>
+
+                  <p className="body">
+                    The ‘Cash on Delivery’ option enables you to pay in cash
+                    when our delivery courier arrives at your residence. Just
+                    make sure your address is correct so that your order will
+                    not be cancelled.
+                  </p>
+                </div>
+              )}
             </div>
           </form>
-
-          <div className="summary">
-            <h6 className="heading--6">summary</h6>
-            <ul className="summary__list">
-              {convertedCart.map((el) => (
-                <li className="summary__item" key={el.slug}>
-                  <div className="summary__product">
-                    <img
-                      src={el.image.desktop}
-                      alt="summary item"
-                      className="summary__image"
-                    />
-                    <div className="summary__textBox">
-                      <p className="body">{el.name}</p>
-                      <p className="body">{`x${el.quantity}`}</p>
-                      <p className="body">{`$ ${el.price}`}</p>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <div className="summary__prices">
-              <div className="summary__price">
-                <p className="summary__priceTitle">total</p>
-                <p className="summary__priceValue">{`$ ${total}`}</p>
-              </div>
-              <div className="summary__price">
-                <p className="summary__priceTitle">shipping</p>
-                <p className="summary__priceValue">$ 50</p>
-              </div>
-              <div className="summary__price">
-                <p className="summary__priceTitle">vat(included)</p>
-                <p className="summary__priceValue">$ 5,396</p>
-              </div>
-              <div className="summary__price">
-                <p className="summary__priceTitle">grand total</p>
-                <p className="summary__priceValue">{`$ ${
-                  total + 50 + 5396
-                }`}</p>
-              </div>
-            </div>
-            <Button
-              type={"primary"}
-              label={"continue & pay"}
-              onClick={handlePayment}
-            />
-          </div>
+          <Summary
+            total={total}
+            items={convertedCart}
+            handlePayment={handlePayment}
+          />
         </div>
       </div>
       <Footer />

@@ -7,11 +7,11 @@ const ProductReview = ({ dir, description, isNew, name, image, slug }) => {
     navigate(`${slug}`);
   };
   return (
-    <article className={`productReview productReview--${dir}`}>
+    <article className={`u-flexBetween productReview productReview--${dir}`}>
       <div className="productReview__imageContainer">
         <picture>
-          <source srcset={image.mobile} media="(max-width: 600px)" />
-          <source srcset={image.tablet} media="(max-width: 900px)" />
+          <source srcSet={image.mobile} media="(max-width: 600px)" />
+          <source srcSet={image.tablet} media="(max-width: 900px)" />
           <img
             className="productReview__image"
             src={image.desktop}

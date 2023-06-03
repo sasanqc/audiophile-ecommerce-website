@@ -1,8 +1,8 @@
 import React from "react";
-import ProductDescription from "../components/ProductDescription";
-import ProductFeatures from "../components/ProductFeatures";
+import ProductDescription from "../layout/details/ProductDescription";
+import ProductFeatures from "../layout/details/ProductFeatures";
 import YouMayLike from "../components/YouMayLike";
-import ProductImages from "../components/ProductImages";
+import ProductImages from "../layout/details/ProductImages";
 import Categories from "../components/Categories";
 import { NavLink, useParams } from "react-router-dom";
 import AppShell from "../layout/AppShell";

@@ -46,9 +46,6 @@
     margin-bottom: rem(32);
   }
   &__price {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     &:last-child {
       margin-top: rem(16);
       .summary__priceValue {
