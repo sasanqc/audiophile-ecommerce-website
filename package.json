@@ -39,7 +39,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://sasanqc.github.io/audiophile-ecommerce-website",
+  "homepage": "https://sasanqc.github.io/audiophile-ecommerce-website",
   "devDependencies": {
     "gh-pages": "^5.0.0"
   }
