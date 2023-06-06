@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 .secondSampleProduct {
-  background-image: url(../../assets/images/home/desktop/image-speaker-zx7.jpg);
+  background-image: url("../../assets/images/home/desktop/image-speaker-zx7.jpg");
 
   border-radius: rem(8);
   padding: rem(101) rem(95);

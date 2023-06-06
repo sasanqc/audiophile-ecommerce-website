@@ -10,11 +10,17 @@ const ProductReview = ({ dir, description, isNew, name, image, slug }) => {
     <article className={`u-flexBetween productReview productReview--${dir}`}>
       <div className="productReview__imageContainer">
         <picture>
-          <source srcSet={image.mobile} media="(max-width: 600px)" />
-          <source srcSet={image.tablet} media="(max-width: 900px)" />
+          <source
+            srcSet={process.env.PUBLIC_URL + image.mobile}
+            media="(max-width: 600px)"
+          />
+          <source
+            srcSet={process.env.PUBLIC_URL + image.tablet}
+            media="(max-width: 900px)"
+          />
           <img
             className="productReview__image"
-            src={image.desktop}
+            src={process.env.PUBLIC_URL + image.desktop}
             alt="product review"
           />
         </picture>

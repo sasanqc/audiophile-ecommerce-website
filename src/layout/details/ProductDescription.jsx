@@ -20,10 +20,16 @@ const ProductDescription = ({
     <article className="productDescription">
       <div className="productDescription__imageContainer">
         <picture>
-          <source srcSet={image.mobile} media="(max-width: 600px)" />
-          <source srcSet={image.tablet} media="(max-width: 900px)" />
+          <source
+            srcSet={process.env.PUBLIC_URL + image.mobile}
+            media="(max-width: 600px)"
+          />
+          <source
+            srcSet={process.env.PUBLIC_URL + image.tablet}
+            media="(max-width: 900px)"
+          />
           <img
-            src={image.desktop}
+            src={process.env.PUBLIC_URL + image.desktop}
             alt="product description"
             className="productDescription__image"
           />

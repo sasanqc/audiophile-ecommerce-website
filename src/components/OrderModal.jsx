@@ -32,7 +32,7 @@ const OrderModal = () => {
         <div className="orderModal__details">
           <div className="orderModal__firstProduct">
             <img
-              src={convertedCart[0].image.desktop}
+              src={process.env.PUBLIC_URL + convertedCart[0].image.desktop}
               alt=""
               className="orderModal__image"
             />

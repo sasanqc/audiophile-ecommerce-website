@@ -8,7 +8,7 @@ import configureStore from "./store/app";
 configureStore();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/audiophile-ecommerce-website">
     <>
       <ScrollToTop />
       <App />

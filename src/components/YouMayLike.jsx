@@ -18,10 +18,16 @@ const YouMayLike = ({ others = [] }) => {
           <div className="youMayLike__item" key={el.slug}>
             <div className="youMayLike__imageContainer">
               <picture className="youMayLike__picture">
-                <source srcSet={el.image.mobile} media="(max-width: 600px)" />
-                <source srcSet={el.image.tablet} media="(max-width: 900px)" />
+                <source
+                  srcSet={process.env.PUBLIC_URL + el.image.mobile}
+                  media="(max-width: 600px)"
+                />
+                <source
+                  srcSet={process.env.PUBLIC_URL + el.image.tablet}
+                  media="(max-width: 900px)"
+                />
                 <img
-                  src={el.image.desktop}
+                  src={process.env.PUBLIC_URL + el.image.desktop}
                   alt=""
                   className="youMayLike__image"
                 />

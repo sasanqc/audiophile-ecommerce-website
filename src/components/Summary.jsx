@@ -9,7 +9,7 @@ const Summary = ({ total, items, handlePayment }) => {
           <li className="summary__item" key={el.slug}>
             <div className="summary__product">
               <img
-                src={el.image.desktop}
+                src={process.env.PUBLIC_URL + el.image.desktop}
                 alt="summary item"
                 className="summary__image"
               />

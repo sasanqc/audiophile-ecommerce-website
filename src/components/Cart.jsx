@@ -32,7 +32,11 @@ const Cart = ({ onCheckoutClick }) => {
       <ul className="cart__items">
         {convertedCart.map((el) => (
           <li className="cart__item" key={el.slug}>
-            <img src={el.image.desktop} alt="product" className="cart__image" />
+            <img
+              src={process.env.PUBLIC_URL + el.image.desktop}
+              alt="product"
+              className="cart__image"
+            />
             <div className="cart__textBox">
               <p className="body">{el.name}</p>
               <p className="body">{`$ ${el.price}`}</p>

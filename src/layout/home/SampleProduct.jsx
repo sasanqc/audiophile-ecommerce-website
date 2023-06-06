@@ -10,7 +10,7 @@ const SampleProduct = () => {
     <section className="sampleProduct">
       <div className="sampleProduct__imageContainer">
         <img
-          src="/assets/home/desktop/image-speaker-zx9.png"
+          src={`${process.env.PUBLIC_URL}/assets/home/desktop/image-speaker-zx9.png`}
           alt="sample product"
           className="sampleProduct__image"
         />

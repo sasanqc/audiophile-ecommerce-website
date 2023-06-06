@@ -11,15 +11,15 @@ const Eearphones = () => {
       <div className="earphones__imageContainer">
         <picture>
           <source
-            srcSet="/assets/home/mobile/image-earphones-yx1.jpg"
+            srcSet={`${process.env.PUBLIC_URL}/assets/home/mobile/image-earphones-yx1.jpg`}
             media="(max-width: 600px)"
           />
           <source
-            srcSet="/assets/home/tablet/image-earphones-yx1.jpg"
+            srcSet={`${process.env.PUBLIC_URL}/assets/home/tablet/image-earphones-yx1.jpg`}
             media="(max-width: 900px)"
           />
           <img
-            src="/assets/home/desktop/image-earphones-yx1.jpg"
+            src={`${process.env.PUBLIC_URL}/assets/home/desktop/image-earphones-yx1.jpg`}
             alt="earphone smaple product"
             className="earphones__image"
           />

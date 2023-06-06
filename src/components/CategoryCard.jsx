@@ -15,7 +15,11 @@ const CategoryCard = ({ name, image }) => {
   };
   return (
     <div className="categoryCard">
-      <img src={image} alt="" className="categoryCard__image" />
+      <img
+        src={process.env.PUBLIC_URL + image}
+        alt=""
+        className="categoryCard__image"
+      />
       <h6 className="heading--6">{name}</h6>
       <Button type={"noborder"} label={"shop"} onClick={handleClick} />
     </div>

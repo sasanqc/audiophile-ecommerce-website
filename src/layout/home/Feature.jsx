@@ -19,16 +19,16 @@ const Feature = () => {
       <div className="feature__imageContainer">
         <picture>
           <source
-            srcSet="/assets/shared/mobile/image-best-gear.jpg"
+            srcSet={`${process.env.PUBLIC_URL}/assets/shared/mobile/image-best-gear.jpg`}
             media="(max-width: 600px)"
           />
           <source
-            srcSet="/assets/shared/tablet/image-best-gear.jpg"
+            srcSet={`${process.env.PUBLIC_URL}/assets/shared/tablet/image-best-gear.jpg`}
             media="(max-width: 900px)"
           />
           <img
             className="feature__image"
-            src="/assets/shared/desktop/image-best-gear.jpg"
+            src={`${process.env.PUBLIC_URL}/assets/shared/desktop/image-best-gear.jpg`}
             alt="best audio gear"
           />
         </picture>
